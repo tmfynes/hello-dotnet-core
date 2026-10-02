@@ -1,0 +1,14 @@
+---
+applications:
+  - name: hello-dotnet-core
+    memory: 512M
+    disk_quota: 1G
+    instances: 1
+    timeout: 180
+    stack: cflinuxfs4
+    buildpacks:
+      - dotnet_core_buildpack
+    host: hello-dotnet-core
+    env:
+      ASPNETCORE_ENVIRONMENT: Production
+      DOTNET_SYSTEM_GLOBALIZATION_INVARIANT: "1"
